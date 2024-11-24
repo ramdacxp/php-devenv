@@ -1,0 +1,22 @@
+{
+  "name": "php-devenv",
+  "version": "0.0.1",
+  "description": "PHP Development Tools",
+  "author": "Michael Hoser",
+  "license": "MIT",
+  "scripts": {
+    "install": "npm run installer fast",
+    "installer": "node .\\scripts\\installer.js",
+    "uninstaller": "node .\\scripts\\uninstaller.js",
+    "admin": ".\\bin\\php\\php.exe -S 127.0.0.1:8181 -t bin\\phpMyAdmin",
+    "db": ".\\bin\\db\\bin\\mysqld.exe",
+    "start": "concurrently -n sql,adm -c blue,green --kill-others \"npm:db\" \"npm:admin\""
+  },
+  "devDependencies": {
+    "chalk": "^4.1.2",
+    "concurrently": "^8.2.2",
+    "node-fetch": "^3.3.2",
+    "qiao-zip-cli": "^4.5.5",
+    "unzipper": "^0.12.3"
+  }
+}
