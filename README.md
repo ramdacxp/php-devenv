@@ -2,6 +2,14 @@
 
 Scripts to install (and remove!) PHP, Composer, MariaDB (MySQL), and PhpMyAdmin on Windows.
 
+## Motivation
+
+For PHP development on Windows existing WAMP stacks were to much for me. I was looking for a fast solution to install and run needed servers locally without polluting the system with hidden files and PATH settings. An Apache webserver was not needed in almost all cases. The `npm` (and thus `NodeJS`) are required anyways, if you build fancy UI stuff on top of some base PHP API with frameworks like [Astro](https://astro.build/) or [Tailwind CSS](https://tailwindcss.com/docs/).
+
+The scripts initially were part of my [PHP-Starter](https://github.com/ramdacxp/php-starter) repo. But with this approach you get multiple copies of the server binaries - one for each project.
+
+The idea behind this repo is to **share a single set of DevEnv binaries across multiple repos.**
+
 ## Usage
 
 You need to have
@@ -31,6 +39,8 @@ Lists of all available commands:
 Example output of `npm run installer php fast`:
 
 ```cmd
+C:\Users\micha\Source\Repos\php-devenv> npm run installer php fast
+
 > php-devenv@0.0.1 installer
 > node .\scripts\installer.js php fast
 
@@ -55,14 +65,21 @@ Start script C:\Users\micha\Source\Repos\php-devenv\bin\php.cmd created.
 Installation of PHP was successful.
 ```
 
+Example output of `devenv`:
 
-## Motivation
+```cmd
+C:\Users\micha\Source\Repos\php-devenv> devenv
+Setting up path environment variable for this shell ...
+The following tools are now available in this shell:
+- composer
+- php
 
-For PHP development on Windows existing WAMP stacks were to much for me. I was looking for a fast solution to install and run needed servers locally without polluting the system with hidden files and PATH settings. An Apache webserver was not needed in almost all cases. The `npm` (and thus `NodeJS`) are required anyways, if you build fancy UI stuff on top of some base PHP API with frameworks like [Astro](https://astro.build/) or [Tailwind CSS](https://tailwindcss.com/docs/).
 
-The scripts initially were part of my [PHP-Starter](https://github.com/ramdacxp/php-starter) repo. But with this approach you get multiple copies of the server binaries - one for each project.
-
-The idea behind this repo is to **share a single set of DevEnv binaries across multiple repos.**
+C:\Users\micha\Source\Repos\php-devenv> composer --version
+Composer version 2.8.3 2024-11-17 13:13:04
+PHP version 8.3.11 (C:\Users\micha\Source\Repos\php-devenv\bin\php\php.exe)
+Run the "diagnose" command to get more detailed diagnostics output.
+```
 
 ## Links
 
