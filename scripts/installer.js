@@ -117,6 +117,7 @@ function createPhpConfigFile(installDirPath) {
 ; Custom Settings
 ; ===============
 extension_dir=${installDirPath}\\ext
+extension=mbstring
 extension=pdo_mysql
 extension=pdo_sqlite
 
@@ -238,7 +239,7 @@ async function installPhp(fastMode) {
 }
 
 async function installDatabase(fastMode) {
-  const version = "11.7.1";
+  const version = "12.0.0";
   const url = `https://mirror.wtnet.de/mariadb/mariadb-${version}/winx64-packages/mariadb-${version}-winx64.zip`;
   const zipPath = path.join(binPath, "mariadb.zip");
   const toolPath = path.join(binPath, "db");
