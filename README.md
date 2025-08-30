@@ -1,10 +1,10 @@
-# Php DevEnv
+# PHP DevEnv
 
 Scripts to install (and remove!) PHP, Composer, MariaDB (MySQL), and PhpMyAdmin on Windows.
 
 ## Motivation
 
-For PHP development on Windows existing WAMP stacks were to much for me. I was looking for a fast solution to install and run needed servers locally without polluting the system with hidden files and PATH settings. An Apache webserver was not needed in almost all cases. The `npm` (and thus `NodeJS`) are required anyways, if you build fancy UI stuff on top of some base PHP API with frameworks like [Astro](https://astro.build/) or [Tailwind CSS](https://tailwindcss.com/docs/).
+For PHP development on Windows existing WAMP stacks were to much for me. I was looking for a fast solution to install and run needed servers locally without polluting my system with hidden files and PATH settings. An Apache webserver was not needed in almost all cases. The `npm` (and thus `NodeJS`) are required anyways, if you build fancy UI stuff on top of some base PHP API with frameworks like [Astro](https://astro.build/) or [Tailwind CSS](https://tailwindcss.com/docs/).
 
 The scripts initially were part of my [PHP-Starter](https://github.com/ramdacxp/php-starter) repo. But with this approach you get multiple copies of the server binaries - one for each project.
 

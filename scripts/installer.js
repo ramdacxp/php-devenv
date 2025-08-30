@@ -210,8 +210,9 @@ async function installComposer(fastMode) {
 }
 
 async function installPhp(fastMode) {
-  const version = "8.3.11";
-  const url = `https://windows.php.net/downloads/releases/archives/php-${version}-Win32-vs16-x64.zip`;
+  const version = "8.3.9";
+  const vStudio = "vs16";
+  const url = `https://windows.php.net/downloads/releases/archives/php-${version}-Win32-${vStudio}-x64.zip`;
   const zipPath = path.join(binPath, "php.zip");
   const toolPath = path.join(binPath, "php");
 
@@ -239,7 +240,7 @@ async function installPhp(fastMode) {
 }
 
 async function installDatabase(fastMode) {
-  const version = "12.0.0";
+  const version = "12.1.1";
   const url = `https://mirror.wtnet.de/mariadb/mariadb-${version}/winx64-packages/mariadb-${version}-winx64.zip`;
   const zipPath = path.join(binPath, "mariadb.zip");
   const toolPath = path.join(binPath, "db");
